@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>seckill-parent</artifactId>
+        <groupId>com.seckill</groupId>
+        <version>0.0.1-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+    <artifactId>seckill-service</artifactId>
+    <packaging>pom</packaging>
+    <description>
+        所有服务
+    </description>
+
+    <modules>
+        <module>seckill-goods</module>
+        <module>seckill-user</module>
+        <module>seckill-order</module>
+        <module>seckill-monitor</module>
+        <module>seckill-manager</module>
+        <module>seckill-page</module>
+        <module>seckill-canal</module>
+        <module>seckill-seata</module>
+        <module>seckill-websocket</module>
+        <module>seckill-message</module>
+    </modules>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.apache.curator</groupId>
+            <artifactId>curator-recipes</artifactId>
+            <version>2.10.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.curator</groupId>
+            <artifactId>curator-framework</artifactId>
+            <version>2.10.0</version>
+        </dependency>
+    </dependencies>
+</project>

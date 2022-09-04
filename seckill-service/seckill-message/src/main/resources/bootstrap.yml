@@ -1,0 +1,31 @@
+server:
+  port: 18088
+logging:
+  pattern:
+    console: "%msg%n"
+spring:
+  application:
+    name: seckill-message
+  cloud:
+    nacos:
+      config:
+        file-extension: yaml
+        server-addr: nacos-server:8848
+      discovery:
+        #Nacos的注册地址
+        server-addr: nacos-server:8848
+  main:
+    allow-bean-definition-overriding: true
+  redis:
+      cluster:
+        nodes:
+          - redis-server:7001
+          - redis-server:7002
+          - redis-server:7003
+          - redis-server:7004
+          - redis-server:7005
+          - redis-server:7006
+#websocket配置
+ws:
+  port: 28082
+  host: 0.0.0.0

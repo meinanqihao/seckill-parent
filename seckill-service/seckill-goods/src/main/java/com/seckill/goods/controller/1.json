@@ -1,0 +1,59 @@
+{
+  "flag": true,
+  "code": 20000,
+  "message": "查询成功",
+  "data": [
+    {
+      "id": "No1288746352271982592",
+      "name": "16:00",
+      "status": 1,
+      "startdate": "2020-07-29",
+      "begintime": "2020-07-30 08:00",
+      "endtime": "2020-07-30 10:00",
+      "totalTime": null,
+      "isDel": null,
+      "timeId": null,
+      "seckillTime": null,
+      "seckillTimeList": null
+    },
+    {
+      "id": "No1288746363827290112",
+      "name": "18:00",
+      "status": 1,
+      "startdate": "2020-07-29",
+      "begintime": "2020-07-30 10:00",
+      "endtime": "2020-07-30 12:00",
+      "totalTime": null,
+      "isDel": null,
+      "timeId": null,
+      "seckillTime": null,
+      "seckillTimeList": null
+    },
+    {
+      "id": "No1288746374296272896",
+      "name": "20:00",
+      "status": 1,
+      "startdate": "2020-07-29",
+      "begintime": "2020-07-30 12:00",
+      "endtime": "2020-07-30 14:00",
+      "totalTime": null,
+      "isDel": null,
+      "timeId": null,
+      "seckillTime": null,
+      "seckillTimeList": null
+    },
+    {
+      "id": "No1288746385125965824",
+      "name": "22:00",
+      "status": 1,
+      "startdate": "2020-07-29",
+      "begintime": "2020-07-30 14:00",
+      "endtime": "2020-07-30 16:00",
+      "totalTime": null,
+      "isDel": null,
+      "timeId": null,
+      "seckillTime": null,
+      "seckillTimeList": null
+    }
+  ]
+}

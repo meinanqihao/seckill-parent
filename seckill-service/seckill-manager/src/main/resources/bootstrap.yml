@@ -1,0 +1,23 @@
+server:
+  port: 18086
+spring:
+  application:
+    name: seckill-manager
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://db-server:3306/seckill_manager?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC
+    username: root
+    password: 123456
+  cloud:
+    nacos:
+      config:
+        file-extension: yaml
+        server-addr: nacos-server:8848
+      discovery:
+        #Nacos的注册地址
+        server-addr: nacos-server:8848
+  main:
+    allow-bean-definition-overriding: true
+logging:
+  pattern:
+    console: "%msg%n"

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>seckill-parent</artifactId>
+        <groupId>com.seckill</groupId>
+        <version>0.0.1-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+    <artifactId>seckill-api</artifactId>
+    <packaging>pom</packaging>
+    <description>
+        所有API公共类抽取
+    </description>
+    <modules>
+        <module>seckill-goods-api</module>
+        <module>seckill-user-api</module>
+        <module>seckill-order-api</module>
+        <module>seckill-manager-api</module>
+        <module>seckill-page-api</module>
+        <module>seckill-message-api</module>
+    </modules>
+
+    <dependencies>
+        <!--每个工程都有Pojo，都需要用到该包对应的注解  -->
+        <dependency>
+            <groupId>javax.persistence</groupId>
+            <artifactId>persistence-api</artifactId>
+            <version>1.0</version>
+            <scope>compile</scope>
+        </dependency>
+
+        <!--web起步依赖-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+            <scope>provided</scope>
+        </dependency>
+
+        <!--依赖common-->
+        <dependency>
+            <groupId>com.seckill</groupId>
+            <artifactId>seckill-common</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+    </dependencies>
+</project>

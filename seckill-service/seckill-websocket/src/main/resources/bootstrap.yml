@@ -1,0 +1,18 @@
+server:
+  port: 18088
+spring:
+  application:
+    name: seckill-websocket
+  cloud:
+    nacos:
+      config:
+        file-extension: yaml
+        server-addr: nacos-server:8848
+      discovery:
+        #Nacos的注册地址
+        server-addr: nacos-server:8848
+  main:
+    allow-bean-definition-overriding: true
+logging:
+  pattern:
+    console: "%msg%n"

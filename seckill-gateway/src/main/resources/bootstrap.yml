@@ -1,0 +1,76 @@
+server:
+  port: 8001
+spring:
+  application:
+    name: gateway-web
+  cloud:
+    nacos:
+      config:
+        file-extension: yaml
+        server-addr: nacos-server:8848
+      discovery:
+        #Nacos的注册地址  http://localhost:8001/api/brand
+        server-addr: nacos-server:8848
+    gateway:
+      routes:
+            #商品
+            - id: goods_route
+              uri: lb://seckill-goods
+              predicates:
+              - Path=/api/skuAct/**,/api/activity/**,/api/brand/**,/api/category/**,/api/seckillTime/**,/api/sku/**
+              filters:
+              - StripPrefix=1
+            #订单
+            - id: order_route
+              uri: lb://seckill-order
+              predicates:
+              - Path=/api/order/**
+              filters:
+              - StripPrefix=1
+            #搜索
+            - id: search_route
+              uri: lb://seckill-search
+              predicates:
+              - Path=/api/search/**
+              filters:
+              - StripPrefix=1
+            #用户
+            - id: user_route
+              uri: lb://seckill-user
+              predicates:
+              - Path=/api/user/**
+              filters:
+              - StripPrefix=1
+            #管理员
+            - id: manager_route
+              uri: lb://seckill-manager
+              predicates:
+              - Path=/api/admin/**
+              filters:
+              - StripPrefix=1
+            #静态页
+            - id: page_route
+              uri: lb://seckill-page
+              predicates:
+              - Path=/api/page/**
+              filters:
+              - StripPrefix=1
+    #sentinel
+    sentinel:
+      transport:
+        port: 8719
+        dashboard: 192.168.211.137:8858
+#超时配置
+ribbon:
+  ReadTimeout: 3000000
+management:
+  endpoint:
+    gateway:
+      enabled: true
+    web:
+      exposure:
+        include: '*'
+
+logging:
+  pattern:
+    console: "%msg%n"

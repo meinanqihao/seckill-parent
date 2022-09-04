@@ -1,0 +1,29 @@
+server:
+  port: 18088
+spring:
+  application:
+    name: seckill-canal
+  cloud:
+    nacos:
+      config:
+        file-extension: yaml
+        server-addr: nacos-server:8848
+      discovery:
+        #Nacos的注册地址
+        server-addr: nacos-server:8848
+  main:
+    allow-bean-definition-overriding: true
+#超时配置
+ribbon:
+  ReadTimeout: 3000000
+#日志
+logging:
+  pattern:
+    console: "%msg%n"
+  level:
+    root: error
+
+#Canal配置
+canal:
+  server: canal-server:11111
+  destination: example
